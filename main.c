@@ -1,13 +1,27 @@
-#include<stdio.h>
-int main(){
-    char letter ='A';
+/*Write a program to calculate simple interest. Use float for the principal, rate, and time
+ variables*/
+#include <stdio.h>
+
+int main() {
     
-    int count = 25;
+    float principal, rate, time, simple_interest;
+
     
-    float price = 19.99f;
-    
-    double pi = 3.14365773777883;
-    
-    printf("char :%c | int: %d | float: %.2f |double: %.101f", letter,count,price,pi);
-    
+    printf("Enter the Principal amount: ");
+    scanf("%f", &principal);
+
+    printf("Enter the Rate of Interest (%%): ");
+    scanf("%f", &rate);
+
+    printf("Enter the Time (in month): ");
+    scanf("%f", &time);
+
+    simple_interest = (principal * rate * time) / 100.0;
+
+   // printf("\n--- Results ---\n");
+    printf("Principal      : $%.2f\n", principal);
+    printf("Interest Earned: $%.2f\n", simple_interest);
+    printf("Total Amount   : $%.2f\n", principal + simple_interest);
+
+    return 0;
 }
